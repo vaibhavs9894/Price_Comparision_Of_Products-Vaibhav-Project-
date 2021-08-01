@@ -11,27 +11,34 @@ This is particularly useful when you want to monitor the price of the specific i
 ----------------------------
 
 ## Main.py
-
-The file contains the code that implements the product comparison feature. The user may query any number of products' **URL** on **Flipkart** they are interested in comparing
-(e.g. mobile phones of different companies). The user is provided with a datasheet containing comparisons of all the specifications of the products they queried for.
+ This File contain Price Scraper, Price cleaning codes and Streamlit codes. The front page has a input box to put name of the product,
+The user must enter the **name of any product** they wish to compare prices.
 </br>
 <p align="center">
-  <img width="630" height="280" src="images_used/sheet1.png">
+  <img width="630" height="280" src="Screenshots\1.png">
 </p>
 <br />
 
 
 -----------------------------
-## price_comparator.py
+## After Scraping Prices:-
 
-The file contains the code that implements the price comparison feature. The user must enter the **name of any product** they wish to compare prices for.They are provided with a 
-datasheet that contains the **prices** and the **link** to the webpage of the **top 5** search results relevant with the product name , on **Amazon** and **Flipkart**.
+After scraping the scraped data will appears in .csv files and on the page.
+datasheet that contains the **prices** , of product from **Amazon** and **Flipkart**.
 </br>
 <p align="center">
-  <img width="600" height="280" src="images_used/sheet2.png">
+  <img width="600" height="280" src="Screenshots\3.png">
 </p>
 <br />
 
+## Search Cheapest and Costliest Price:-
+
+From the selection Box choose **Cheapest** product prices or **Costliest** Product Price. It will compare and show the same from csv files of **Amazon** and **Flipkart**.
+</br>
+<p align="center">
+  <img width="600" height="280" src="Screenshots\4.png">
+</p>
+<br />
 
 
 

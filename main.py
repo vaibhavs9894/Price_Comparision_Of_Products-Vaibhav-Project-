@@ -7,10 +7,13 @@ import time
 from PIL import Image
 import plotly.express as px
 
+#------------------------------------Enter The Product------------------------------------------#
+
 
 product = st.text_input('Enter The Product')
 
-with st.spinner("Loading Data..."):
+
+with st.spinner("Welcome!!"):
     st.markdown("""
         <style>
             .mainhead{
@@ -56,7 +59,7 @@ with st.spinner("Loading Data..."):
                     margin-top: 0%;
                     letter-spacing:.1px;
                     word-spacing:1px;
-                    color:indianred;
+                    color:Turquoise;
                     margin-left:5%;}
                 </style>
             """, unsafe_allow_html=True)
@@ -70,6 +73,8 @@ st.markdown("___")
 
 
 #-------------------------------------------Scraping of price From Amazon and Flipkart--------------------------------------#
+
+
 if product:
     driver = webdriver.Chrome(ChromeDriverManager().install())
     l=product
@@ -90,7 +95,10 @@ if product:
         pd.DataFrame(data1).to_csv("Amazon_price.csv")
         da= pd.read_csv("Amazon_price.csv")
         
+        
         #-------------------------Cleaning Price value-------------------------------------#
+
+
         da['price'] = da['price'].replace({'₹': '', ',': '', '\(': '-', '\)': ''}, regex=True).astype(float)
 
         pd.DataFrame(da).to_csv("Amazon_price.csv"  )
@@ -114,13 +122,17 @@ if product:
     pd.DataFrame(data2).to_csv("flipkart_price.csv")
     df= pd.read_csv("Flipkart_price.csv")
 
+
+    #-------------------------Cleaning Price value-------------------------------------#
+
+
     df['price'] = df['price'].replace({'₹': '', ',': '', '\(': '-', '\)': ''}, regex=True).astype(float)
     pd.DataFrame(df).to_csv("Flipkart_price.csv")
     
 
 
 
-#-------------------------------------MainPage fro Streamlit--------------------------------------------#
+#-------------------------------------MainPage for Streamlit--------------------------------------------#
 
     
     st.info('Price Scrap from Flipkart are:-')
@@ -160,6 +172,10 @@ if product:
         st.success('Costliest price on Flipkart is:-')
         q = df['price'].max()
         st.error(q)
+
+
+#---------------------------------------Footer-----------------------------------------#
+
 
     st.markdown(
                 '<marquee class="content" style = "float:right;"> Visit My gitHub:- https://github.com/vaibhavs9894</marquee>', unsafe_allow_html=True)

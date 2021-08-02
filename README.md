@@ -4,9 +4,9 @@
 <br />
 
 # Price Comparison Of Product
-### Compares Product price from Top E-commerce Webites (Amazon & Flipkart)
+### Compares Product price from Top E-commerce Websites (Amazon & Flipkart)
 
-This is particularly useful when you want to monitor the price of the specific item from eCommerce platforms. Here, in this program, we have targeted two major eCommerce website (Flipkart and Amazon) to find the price of a product. On each execution, Both websites are crawled and the price is obtained.
+This is particularly useful when you want to monitor the price of a specific item from eCommerce platforms. Here, in this program, we have targeted two major eCommerce websites (Flipkart and Amazon) to find the price of a product. On each execution, Both websites are crawled and the price is obtained.
 
 ----------------------------
 

@@ -1,0 +1,6 @@
+pandas                  1.2.4
+selenium                3.141.0
+streamlit               0.85.0
+webdriver-manager       3.4.2
+Pillow                  8.2.0
+plotly                  4.14.3
